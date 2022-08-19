@@ -23,3 +23,12 @@ npm install express --save
 npm install ejs --save
 nom install body-parser --save
 ```
+
+## docker mongo
+
+```bash
+docker run --name mongo -p 27017:27017 -d mongo
+
+docker start mongo;
+docker stop mongo;
+```

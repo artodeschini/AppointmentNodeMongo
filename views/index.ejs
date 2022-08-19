@@ -1,14 +1,26 @@
-<%- include('partials/header.ejs'); %>
-<div class="container">
-    <br>
-    <div class="card">
-        <div class="card-header">
-            <h2>Sistema de Cadastro de Consultas</h2>
-        </div>
-        <div class="card-body">
-                <a href="/cadastro" class="btn btn-success">Nova Consulta</a>
-            </form>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Agendamentos</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="calendar">
+
     </div>
-</div>
-<%- include('partials/footer.ejs'); %>
+    
+</body>
+<script>
+    let element = document.getElementById('calendar');
+    let calendar = new FullCalendar.Calendar(element,{
+        initalView: 'dayGridMonth',
+        locale: 'pt-br'
+    });
+
+    calendar.render();
+    
+</script>
+</html>
