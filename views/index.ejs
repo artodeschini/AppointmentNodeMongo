@@ -9,6 +9,8 @@
     <script src="/main.js"></script>
 </head>
 <body>
+    <button onclick="window.location.replace('/cadastro')">Cadastrar</button>
+    
     <div id="calendar"></div>
     
 </body>
@@ -16,7 +18,12 @@
     let element = document.getElementById('calendar');
     let calendar = new FullCalendar.Calendar(element,{
         initalView: 'dayGridMonth',
-        locale: 'pt-br'
+        locale: 'pt-br',
+        events: 'findAll',
+        eventClick: function(info) {
+            //console.log(info);
+            window.location.href = `/event/${info.event.id}`;
+        }
     });
     calendar.render();
     

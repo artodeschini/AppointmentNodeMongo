@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs'); %>
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-header">
+                <h2>Consulta <%= data.description %></h2>
+            </div>
+            <div class="card-body">
+            
+                <label for="name">Nome Paciente</label>
+                <p class="form-control"><%= data.name %></p>
+                <br>
+
+                <label for="email">Email</label>
+                <p class="form-control"><%= data.email %></p>
+                <br>
+
+                <label for="cpf">CPF</label>
+                <p class="form-control"><%= data.cpf %></p>
+                <br>
+                <% if (!data.finished) { %>
+                <form method="POST" action="/finished">
+                    <input type="hidden" id="id" name="id" value="<%= data.id %>" />
+                    <button class="btn btn-success">Finalizar</button>
+                </form>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+<%- include('partials/footer.ejs'); %>
