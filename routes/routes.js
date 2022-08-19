@@ -9,5 +9,7 @@ router.post('/cadastro', AppointmentController.create);
 router.get('/findAll', AppointmentController.findAllAppointments);
 router.get('/event/:id', AppointmentController.getById); 
 router.post('/finished', AppointmentController.finished);
+router.get('/list', AppointmentController.list);
+router.get('/search', AppointmentController.search);
 
 module.exports = router;

@@ -45,6 +45,16 @@ class AppointmentController {
             res.redirect('/');
         }
     }
+
+    async list(req, res) {
+        let appointments = await service.list();
+        res.render('list', {appointments});
+    }
+
+    async search(req, res) {
+        let appointments = await service.search(req.query.search);
+        res.render('list', {appointments});
+    }
 }
 
 module.exports = new AppointmentController();

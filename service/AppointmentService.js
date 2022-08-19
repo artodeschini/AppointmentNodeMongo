@@ -86,6 +86,32 @@ class AppointmentService {
             return false;
         }
     }
+
+    async list() {
+        try {
+            return await Appointment.find();
+        } catch (error) {
+            console.log(error);
+            return [];
+        }
+    }
+
+    async search(param) {
+        console.log(param)
+        try {
+            let appointments = await Appointment.find().or([
+                {cpf: param},
+                {name: param},
+                {email: param}
+            ]);
+            
+            return appointments;
+        } catch (error) {
+            console.log(error);
+            
+            return [];
+        }
+    }
 }
 
 module.exports = new AppointmentService();
