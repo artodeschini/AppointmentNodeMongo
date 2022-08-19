@@ -12,6 +12,7 @@
 
 [Bootstrap](https://getbootstrap.com/)
 [fullCalendar](https://fullcalendar.io/)
+[jQuery](https://code.jquery.com/)
 
 ## npm dependencies
 
@@ -22,6 +23,13 @@ npm install mongoose --save
 npm install express --save
 npm install ejs --save
 nom install body-parser --save
+```
+
+## donwload install jQuery
+
+```bash
+cd public
+curl -G https://code.jquery.com/jquery-3.6.0.min.js -o jquery-3.6.0.min.js
 ```
 
 ## docker mongo
