@@ -13,6 +13,7 @@
 [Bootstrap](https://getbootstrap.com/)
 [fullCalendar](https://fullcalendar.io/)
 [jQuery](https://code.jquery.com/)
+[mailtrap fake email](https://mailtrap.io/)
 
 ## npm dependencies
 
@@ -22,7 +23,8 @@ npm init
 npm install mongoose --save
 npm install express --save
 npm install ejs --save
-nom install body-parser --save
+npm install body-parser --save
+npm instal nodemailer --save
 ```
 
 ## donwload install jQuery

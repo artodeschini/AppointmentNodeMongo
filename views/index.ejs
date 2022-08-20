@@ -7,11 +7,49 @@
     <title>Sistema de Agendamentos</title>
     <link href="/main.min.css" rel="stylesheet" type="text/css" />
     <script src="/main.js"></script>
+    <style>
+        
+        h2 { font-size: 2rem; }
+
+        .btn {
+            display: inline-block;
+            /*font-family: $btn-font-family;
+            font-weight: $btn-font-weight;
+            line-height: $btn-line-height;
+            color: $body-color; */
+            text-align: center;
+            /* text-decoration: if($link-decoration == none, null, none); */
+            /* white-space: $btn-white-space; */
+            vertical-align: middle;
+            /* cursor: if($enable-button-pointers, pointer, null); */
+            user-select: none;
+            background-color: transparent;
+            /* border: $btn-border-width solid transparent; */
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .btn-success {
+            color: #fff;
+            background-color: #198754;
+            border-color: #198754;
+        }
+
+        .btn-warning {
+            color: #000;
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="window.location.replace('/cadastro')">Cadastrar</button>
-    
-    <div id="calendar"></div>
+
+    <div>
+        <h2>Sistema de Agendamentos</h2>
+        <a href="/cadastro" class="btn btn-success">Cadastro</a>
+        <a href="/list" class="btn btn-warning">Listagem</a>
+        <div id="calendar"></div>
+    </div>
     
 </body>
 <script>
