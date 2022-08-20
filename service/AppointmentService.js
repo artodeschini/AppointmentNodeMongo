@@ -141,7 +141,7 @@ class AppointmentService {
 
         console.log(models);
         
-        models.forEach(async a => {
+        models.forEach(a => {
             if (!a.notified) {
                 let m = AppointmentFactory.build(a);
                 let date = m.start;
@@ -163,9 +163,16 @@ class AppointmentService {
                         subject: `Sua Consulta ${a.description} irá acontecer em 1h`,
                         text: `Ola ${a.nome} a sua nsulta ${a.description} irá acontecer hoje`
                     }).then(() => {
+                        // alterado para nao enviar mais emails
+
                         Appointment.findByIdAndUpdate(a._id).update({
                             notified: true
-                        })
+                        }).then(() => {
+                            console.log('consulta alterada para notificada');
+                        }).catch(e => {
+                            console.log(e);
+                        });
+
                     }).catch(error => {
                         console.log(error);
                     });
